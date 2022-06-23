@@ -1,16 +1,16 @@
-import { NavigateFunction, useNavigate } from "react-router-dom"
+import { NavigateFunction, useNavigate } from 'react-router-dom';
 
 export const About = () => {
-  const navigation: NavigateFunction = useNavigate()
+  const navigation: NavigateFunction = useNavigate();
 
   const onNextPage = (): void => {
-    navigation("/")
-  }
+    navigation('/');
+  };
 
   return (
-    <div style={{ padding: 16 }} className="w-[360px] h-[600px]">
+    <div style={{ padding: 16 }}>
       <span>About page</span>
       <button onClick={onNextPage}>Home</button>
     </div>
-  )
-}
+  );
+};
