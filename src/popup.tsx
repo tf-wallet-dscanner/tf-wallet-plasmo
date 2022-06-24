@@ -11,10 +11,10 @@ import './styles/global.css';
 
 const queryClient = new QueryClient();
 
-function IndexPopup() {
-  // react devtool disable
-  if (process.env.NODE_ENV === 'production') disableReactDevTools();
+// react devtool disable
+if (process.env.NODE_ENV === 'production') disableReactDevTools();
 
+function IndexPopup() {
   return (
     <React.StrictMode>
       <MemoryRouter>
