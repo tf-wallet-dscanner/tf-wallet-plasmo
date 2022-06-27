@@ -1,0 +1,26 @@
+name: pr-labeler
+
+on:
+  pull_request:
+
+jobs:
+  pr-labeler:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: TimonVS/pr-labeler-action@v3
+        with:
+          configuration-path: .github/pr-labeler.yml # optional, .github/pr-labeler.yml is the default value
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: size-label
+        uses: 'pascalgn/size-label-action@v0.4.3'
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+          IGNORED: "!.gitignore\nyarn.lock\n*/yarn.lock\ngenerated/**\n__snapshots__/**\nlocales/**\nassets/**\n"
+          SIZE_XXS: 0
+          SIZE_XS: 30
+          SIZE_S: 60
+          SIZE_M: 100
+          SIZE_L: 300
+          SIZE_XL: 600
+          SIZE_XXL: 1000
