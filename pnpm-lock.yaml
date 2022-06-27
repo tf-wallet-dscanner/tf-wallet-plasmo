@@ -10,6 +10,7 @@ specifiers:
   '@types/react': 18.0.12
   '@types/react-dom': 18.0.5
   autoprefixer: ^10.4.7
+  classnames: ^2.3.1
   cssnano: ^5.1.12
   npm-run-all: ^4.1.5
   parcel: ^2.6.2
@@ -25,7 +26,8 @@ specifiers:
   typescript: 4.7.4
 
 dependencies:
-  plasmo: 0.43.4_an7lbiliwqmg2kuig5q2iyjlny
+  classnames: 2.3.1
+  plasmo: 0.43.6_an7lbiliwqmg2kuig5q2iyjlny
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-query: 3.39.1_biqbaboplfbrettd7655fr4n2y
@@ -2533,6 +2535,10 @@ packages:
     resolution: {integrity: sha512-vsGdkwSCDpWmP80ncATX7iea5DWQemg1UgCW5J8tqjU3lYw4FBYuj89J0CTVomA7BEfvSZd84GmHko+MxFQU2A==}
     dev: true
 
+  /classnames/2.3.1:
+    resolution: {integrity: sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==}
+    dev: false
+
   /cli-boxes/1.0.0:
     resolution: {integrity: sha512-3Fo5wu8Ytle8q9iCzS4D2MWVL2X7JVWRiS1BnXbTFDhS9c/REkM9vd1AmabsoZoY5/dGi5TT9iKL8Kb6DeBRQg==}
     engines: {node: '>=0.10.0'}
@@ -4761,8 +4767,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /plasmo/0.43.4_an7lbiliwqmg2kuig5q2iyjlny:
-    resolution: {integrity: sha512-7w7kRyQtTb5Lu4ug6llBPqdrimMeSiW9rU4wntTTCrGq6FWSIb3Q3UuhhqcaYL4ZxpkrpygRaumWFm+KiPWgiw==}
+  /plasmo/0.43.6_an7lbiliwqmg2kuig5q2iyjlny:
+    resolution: {integrity: sha512-ctXrZUl6XbE2m9tywpN5PWv0ANDuVCoZQNk7oZ7wuh8h/UHuSU747IpKQa7hxxNTWGktodkDg5iByvLdlIv/oA==}
     hasBin: true
     dependencies:
       '@expo/spawn-async': 1.6.0

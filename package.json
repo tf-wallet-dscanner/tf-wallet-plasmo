@@ -11,6 +11,7 @@
     "devtools:react": "react-devtools"
   },
   "dependencies": {
+    "classnames": "^2.3.1",
     "plasmo": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",
