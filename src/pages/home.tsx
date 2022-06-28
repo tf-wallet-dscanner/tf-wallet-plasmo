@@ -1,5 +1,7 @@
 import { NavigateFunction, useNavigate } from 'react-router-dom';
 
+import Button from '~components/atoms/button';
+import { THEME_COLOR } from '~constants/colors';
 import { useCounterStore } from '~store';
 
 export const Home = () => {
@@ -16,16 +18,19 @@ export const Home = () => {
   return (
     <div style={{ padding: 16 }}>
       <span>Home page111</span>
-      <button onClick={onNextPage}>About</button>
-      <button
+      <Button onClick={onNextPage}>About</Button>
+      <Button
+        color={THEME_COLOR.ERROR}
         className="font-bold pl-5"
         onClick={() => {
           navigation('/hong');
         }}>
         Hong
-      </button>
+      </Button>
       <div>{bears}</div>
-      <button onClick={increasePopulation}>Click!</button>
+      <Button color={THEME_COLOR.WARNING} onClick={increasePopulation}>
+        Click!
+      </Button>
     </div>
   );
 };
