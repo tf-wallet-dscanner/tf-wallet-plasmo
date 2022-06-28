@@ -23,6 +23,6 @@ const createState: CommonStateCreator<CounterCreateState> = (set) => ({
   removeAllBears: () => set({ bears: 0 }),
 });
 
-const useCounterStore = create(logger(createState));
+const useCounterStore = create(logger(createState, 'counter-store'));
 
 export default useCounterStore;
