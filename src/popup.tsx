@@ -6,6 +6,7 @@ import { MemoryRouter } from 'react-router-dom';
 
 import { Routing } from '~pages';
 import { disableReactDevTools } from '~scripts/disableReactDevTools';
+import '~utils/disable-console';
 
 import './styles/global.scss';
 
