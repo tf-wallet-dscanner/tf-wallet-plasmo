@@ -1,0 +1,31 @@
+.alert {
+  &__container {
+    @apply flex flex-row rounded py-3;
+  }
+  &__icon {
+    @apply flex px-2;
+  }
+  &__text-wrap {
+    @apply flex flex-col justify-center;
+
+    &-title {
+      @apply font-medium pb-1;
+    }
+    &-contents {
+      @apply text-sm;
+    }
+  }
+  /* alert 안에서만 쓰일 text color */
+  &__error-text-color {
+    color: #5f2120;
+  }
+  &__warning-text-color {
+    color: #663c00;
+  }
+  &__info-text-color {
+    color: #014361;
+  }
+  &__success-text-color {
+    color: #1e4620;
+  }
+}
