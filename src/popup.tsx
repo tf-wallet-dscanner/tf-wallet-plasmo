@@ -1,8 +1,10 @@
+import PortStream from 'extension-port-stream';
 import React from 'react';
 import 'react-devtools';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import { MemoryRouter } from 'react-router-dom';
+import browser from 'webextension-polyfill';
 
 import { Routing } from '~pages';
 import { disableReactDevTools } from '~scripts/disableReactDevTools';
@@ -16,6 +18,17 @@ const queryClient = new QueryClient();
 if (process.env.NODE_ENV === 'production') disableReactDevTools();
 
 function IndexPopup() {
+  // setup stream to background
+  const extensionPort = browser.runtime.connect({ name: 'popup' });
+  const connectionStream = new PortStream(extensionPort);
+
+  browser.runtime.sendMessage(extensionPort).then(function () {
+    console.log('sendMessage callback');
+  });
+
+  console.log('UI extensionPort : ', extensionPort);
+  console.log('UI connectionStream : ', connectionStream);
+
   return (
     <React.StrictMode>
       <MemoryRouter>

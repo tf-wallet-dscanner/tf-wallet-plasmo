@@ -13,6 +13,7 @@ specifiers:
   autoprefixer: ^10.4.7
   classnames: ^2.3.1
   cssnano: ^5.1.12
+  extension-port-stream: ^2.0.1
   npm-run-all: ^4.1.5
   parcel: ^2.6.2
   plasmo: latest
@@ -23,17 +24,21 @@ specifiers:
   react-dom: 18.2.0
   react-query: ^3.39.1
   react-router-dom: ^6.3.0
+  stream-browserify: ^3.0.0
   tailwindcss: ^3.1.4
   typescript: 4.7.4
+  webextension-polyfill: ^0.9.0
   zustand: ^3.7.1
 
 dependencies:
   classnames: 2.3.1
-  plasmo: 0.43.6_an7lbiliwqmg2kuig5q2iyjlny
+  extension-port-stream: 2.0.1
+  plasmo: 0.43.7_an7lbiliwqmg2kuig5q2iyjlny
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-query: 3.39.1_biqbaboplfbrettd7655fr4n2y
   react-router-dom: 6.3.0_biqbaboplfbrettd7655fr4n2y
+  stream-browserify: 3.0.0
   zustand: 3.7.1_react@18.2.0
 
 devDependencies:
@@ -55,6 +60,7 @@ devDependencies:
   react-devtools: 4.24.7
   tailwindcss: 3.1.4
   typescript: 4.7.4
+  webextension-polyfill: 0.9.0
 
 packages:
 
@@ -289,24 +295,6 @@ packages:
       '@babel/helper-validator-identifier': 7.16.7
       to-fast-properties: 2.0.0
     dev: true
-
-  /@dword-design/endent/1.0.1:
-    resolution: {integrity: sha512-F8xRP8hTVd8JclhvmZskVN6QMLMge+kYCPOZ2Xsx7FJbs2dyD9J1cwDNsBAVujBfK2aKeznI/eqbHVK2XxCA2g==}
-    dependencies:
-      dedent: github.com/dword-design/dedent/c8d46e5017d60504657c2d01b59082c0329a12a7
-      fast-json-parse: 1.0.3
-      objectorarray: 1.0.5
-    dev: false
-
-  /@dword-design/functions/4.0.7:
-    resolution: {integrity: sha512-Q225czTokHcXIUhe+yVlHuhnETdfKyJptNAfg2LnoB/HXUxQyb76+kwpBzwlldOQ7FJl+RDATj4zTRBh4puesA==}
-    engines: {node: '>=12'}
-    dependencies:
-      '@dword-design/endent': 1.0.1
-      delay: 5.0.0
-      lodash: 4.17.21
-      tinycolor2: 1.4.2
-    dev: false
 
   /@electron/get/1.14.1:
     resolution: {integrity: sha512-BrZYyL/6m0ZXz/lDxy/nlVhQz+WF+iPS6qXolEU8atw7h6v1aYkjwJZ63m+bJMBTxDE66X+r2tPS4a/8C82sZw==}
@@ -871,7 +859,7 @@ packages:
     dependencies:
       '@parcel/core': 2.6.1
       '@parcel/fs-search': 2.6.1
-      '@parcel/types': 2.6.1_@parcel+core@2.6.1
+      '@parcel/types': 2.6.1
       '@parcel/utils': 2.6.1
       '@parcel/watcher': 2.0.5
       '@parcel/workers': 2.6.1_@parcel+core@2.6.1
@@ -1170,7 +1158,7 @@ packages:
       '@parcel/diagnostic': 2.6.1
       '@parcel/fs': 2.6.1_@parcel+core@2.6.1
       '@parcel/logger': 2.6.1
-      '@parcel/types': 2.6.1
+      '@parcel/types': 2.6.1_@parcel+core@2.6.1
       '@parcel/utils': 2.6.1
       '@parcel/workers': 2.6.1_@parcel+core@2.6.1
       semver: 5.7.1
@@ -1969,7 +1957,7 @@ packages:
       '@parcel/core': 2.6.1
       '@parcel/diagnostic': 2.6.1
       '@parcel/logger': 2.6.1
-      '@parcel/types': 2.6.1_@parcel+core@2.6.1
+      '@parcel/types': 2.6.1
       '@parcel/utils': 2.6.1
       chrome-trace-event: 1.0.3
       nullthrows: 1.1.1
@@ -2346,10 +2334,6 @@ packages:
       postcss: 8.4.14
       postcss-value-parser: 4.2.0
     dev: true
-
-  /babel-plugin-add-module-exports/1.0.4:
-    resolution: {integrity: sha512-g+8yxHUZ60RcyaUpfNzy56OtWW+x9cyEe9j+CranqLiqbju2yf/Cy6ZtYK40EZxtrdHllzlVZgLmcOUCTlJ7Jg==}
-    dev: false
 
   /balanced-match/1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -2993,11 +2977,6 @@ packages:
     resolution: {integrity: sha512-Y2caI5+ZwS5c3RiNDJ6u53VhQHv+hHKwhkI1iHvceKUHw9Df6EK2zRLfjejRgMuCuxK7PfSWIMwWecceVvThjQ==}
     dev: true
 
-  /delay/5.0.0:
-    resolution: {integrity: sha512-ReEBKkIfe4ya47wlPYf/gu5ib6yUG0/Aez0JQZQz94kiWtRQvZIQbTiehsnwHvLSWJnQdhVeqYue7Id1dKr0qw==}
-    engines: {node: '>=10'}
-    dev: false
-
   /detect-libc/1.0.3:
     resolution: {integrity: sha512-pGjwhsmsp4kL2RTz08wcOlGN83otlqHeD/Z5T8GXZB+/YcpQ/dgo+lbU8ZsGxV0HIvqqxo9l7mqYwyYMD9bKDg==}
     engines: {node: '>=0.10'}
@@ -3214,6 +3193,13 @@ packages:
       strip-eof: 1.0.0
     dev: true
 
+  /extension-port-stream/2.0.1:
+    resolution: {integrity: sha512-ltrv4Dh/979I04+D4Te6TFygfRSOc5EBzzlHRldWMS8v73V80qWluxH88hqF0qyUsBXTb8NmzlmSipcre6a+rg==}
+    engines: {node: '>=12.0.0'}
+    dependencies:
+      webextension-polyfill-ts: 0.22.0
+    dev: false
+
   /external-editor/3.1.0:
     resolution: {integrity: sha512-hMQ4CX1p1izmuLYyZqLMO/qGNw10wSv9QDCPfzXfyFrOaCSSoRfqE1Kf1s5an66J5JZC62NewG+mK49jOCtQew==}
     engines: {node: '>=4'}
@@ -3257,10 +3243,6 @@ packages:
     dependencies:
       iobuffer: 2.1.0
       tiff: 2.1.0
-    dev: false
-
-  /fast-json-parse/1.0.3:
-    resolution: {integrity: sha512-FRWsaZRWEJ1ESVNbDWmsAlqDk96gPQezzLghafp5J4GUKjbCz3OkAHuZs5TuPEtkbVQERysLp9xv6c24fBm8Aw==}
     dev: false
 
   /fast-list/1.0.3:
@@ -4643,10 +4625,6 @@ packages:
       object-keys: 1.1.1
     dev: true
 
-  /objectorarray/1.0.5:
-    resolution: {integrity: sha512-eJJDYkhJFFbBBAxeh8xW+weHlkI28n2ZdQV/J/DNfWfSKlGEf2xcfAbZTv3riEXHAhL9SVOTs2pRmXiSTf78xg==}
-    dev: false
-
   /oblivious-set/1.0.0:
     resolution: {integrity: sha512-z+pI07qxo4c2CulUHCDf9lcqDlMSo72N/4rLUpRXf6fu+q8vjt8y0xS+Tlf8NTJDdTXHbdeO1n3MlbctwEoXZw==}
     dev: false
@@ -4853,12 +4831,12 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /plasmo/0.43.6_an7lbiliwqmg2kuig5q2iyjlny:
-    resolution: {integrity: sha512-ctXrZUl6XbE2m9tywpN5PWv0ANDuVCoZQNk7oZ7wuh8h/UHuSU747IpKQa7hxxNTWGktodkDg5iByvLdlIv/oA==}
+  /plasmo/0.43.7_an7lbiliwqmg2kuig5q2iyjlny:
+    resolution: {integrity: sha512-OkmlWPsStXGfrLpJrqa4GBi+T7UGdK7on0OxvlsmPCY5/BnCoIB4yiunVaO9st01zsqhd64kF2aKKzqKIn4AhQ==}
     hasBin: true
     dependencies:
       '@expo/spawn-async': 1.6.0
-      '@parcel/core': 2.6.1
+      '@parcel/core': 2.6.2
       '@parcel/watcher': 2.0.5
       '@plasmohq/parcel-config': 0.0.2_an7lbiliwqmg2kuig5q2iyjlny
       archiver: 5.3.1
@@ -4877,7 +4855,6 @@ packages:
       node-object-hash: 2.3.10
       process: 0.11.10
       semver: 7.3.7
-      ts-ast-to-literal: 1.0.5_typescript@4.7.4
       typescript: 4.7.4
     transitivePeerDependencies:
       - cssnano
@@ -5741,6 +5718,13 @@ packages:
     resolution: {integrity: sha512-ji9qxRnOVfcuLDySj9qzhGSEFVobyt1kIOSkj1qZzYLzq7Tos/oUUWvotUPQLlrsidqsK6tBH89Bc9kL5zHA6w==}
     deprecated: 'Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility'
 
+  /stream-browserify/3.0.0:
+    resolution: {integrity: sha512-H73RAHsVBapbim0tU2JwwOiXUj+fikfiaoYAKHF3VJfA0pe2BCzkhAHBlLG6REzE+2WNZcxOXjK7lkso+9euLA==}
+    dependencies:
+      inherits: 2.0.4
+      readable-stream: 3.6.0
+    dev: false
+
   /string-width/2.1.1:
     resolution: {integrity: sha512-nOqH59deCq9SRHlxq1Aw85Jnt4w6KvLKqWVik6oA9ZklXLNIOlqg4F2yrT1MVaTjAqvVwdfeZ7w7aCvJD7ugkw==}
     engines: {node: '>=4'}
@@ -5961,10 +5945,6 @@ packages:
   /timsort/0.3.0:
     resolution: {integrity: sha512-qsdtZH+vMoCARQtyod4imc2nIJwg9Cc7lPRrw9CzF8ZKR0khdr8+2nX80PBhET3tcyTtJDxAffGh2rXH4tyU8A==}
 
-  /tinycolor2/1.4.2:
-    resolution: {integrity: sha512-vJhccZPs965sV/L2sU4oRQVAos0pQXwsvTLkWYdqJ+a8Q5kPFzJTuOFwy7UniPli44NKQGAglksjvOcpo95aZA==}
-    dev: false
-
   /tmp/0.0.33:
     resolution: {integrity: sha512-jRCJlojKnZ3addtTOjdIqoRuPEKBvNXcGYqzO6zWZX8KfKEpnGY5jfggJQ3EjKuu8D4bJRr0y+cYJFmYbImXGw==}
     engines: {node: '>=0.6.0'}
@@ -5988,16 +5968,6 @@ packages:
     dependencies:
       is-number: 7.0.0
     dev: true
-
-  /ts-ast-to-literal/1.0.5_typescript@4.7.4:
-    resolution: {integrity: sha512-dHRN7h2UGkWtQriPMGRokoN6st4bUr6ADccH90opZWrRpKxjQvdCOkpy69foSVL2zXD18eaGuVldsr3XJoi6vQ==}
-    engines: {node: '>=12'}
-    peerDependencies:
-      typescript: ^4.3.5
-    dependencies:
-      '@dword-design/functions': 4.0.7
-      typescript: 4.7.4
-    dev: false
 
   /tslib/2.4.0:
     resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
@@ -6160,6 +6130,21 @@ packages:
     resolution: {integrity: sha512-WmGabA4GLth1ju9VLm/oMDcPMhMngHoBSdY1OMhrEJvNsPl7z2p+7RBOXjEi5zlP0dK+Shd3Wm+BdD5WZrNYBA==}
     dev: false
 
+  /webextension-polyfill-ts/0.22.0:
+    resolution: {integrity: sha512-3P33ClMwZ/qiAT7UH1ROrkRC1KM78umlnPpRhdC/292UyoTTW9NcjJEqDsv83HbibcTB6qCtpVeuB2q2/oniHQ==}
+    deprecated: This project has moved to @types/webextension-polyfill
+    dependencies:
+      webextension-polyfill: 0.7.0
+    dev: false
+
+  /webextension-polyfill/0.7.0:
+    resolution: {integrity: sha512-su48BkMLxqzTTvPSE1eWxKToPS2Tv5DLGxKexLEVpwFd6Po6N8hhSLIvG6acPAg7qERoEaDL+Y5HQJeJeml5Aw==}
+    dev: false
+
+  /webextension-polyfill/0.9.0:
+    resolution: {integrity: sha512-LTtHb0yR49xa9irkstDxba4GATDAcDw3ncnFH9RImoFwDlW47U95ME5sn5IiQX2ghfaECaf6xyXM8yvClIBkkw==}
+    dev: true
+
   /which-boxed-primitive/1.0.2:
     resolution: {integrity: sha512-bwZdv0AKLpplFY2KZRX6TvyuN7ojjr7lwkg6ml0roIy9YeuSr7JS372qlNW18UQYzgYK9ziGcerWqZOmEn9VNg==}
     dependencies:
@@ -6275,12 +6260,4 @@ packages:
         optional: true
     dependencies:
       react: 18.2.0
-    dev: false
-
-  github.com/dword-design/dedent/c8d46e5017d60504657c2d01b59082c0329a12a7:
-    resolution: {tarball: https://codeload.github.com/dword-design/dedent/tar.gz/c8d46e5017d60504657c2d01b59082c0329a12a7}
-    name: dedent
-    version: 0.7.0
-    dependencies:
-      babel-plugin-add-module-exports: 1.0.4
     dev: false
