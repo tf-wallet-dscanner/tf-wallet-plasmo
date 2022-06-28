@@ -1,11 +1,29 @@
-/**
-	1. disable 상태 처리 ( O )
-	2. 버튼 타입에 따른 색상
-	3. hover시 opacity
-**/
 .button {
   @apply flex justify-center items-center box-border transition
 		w-full min-h-[50] rounded font-bold py-3 px-4
-		disabled:opacity-50 disabled:pointer-events-none;
-  background: #cecece;
+		disabled:opacity-50 disabled:pointer-events-none hover:opacity-75;
+
+  &__default {
+    @apply bg-primary text-white;
+  }
+
+  &__primary {
+    @apply bg-primary text-white;
+  }
+
+  &__error {
+    @apply bg-error;
+  }
+
+  &__warning {
+    @apply bg-warning;
+  }
+
+  &__info {
+    @apply bg-info;
+  }
+
+  &__success {
+    @apply bg-success;
+  }
 }

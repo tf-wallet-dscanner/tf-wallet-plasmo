@@ -5,11 +5,15 @@ import type {
   PropsWithChildren,
 } from 'react';
 
+import { THEME_COLOR } from '~constants/colors';
+
 import './button.scss';
 
 interface ButtonProps<T extends PropsWithChildren<ElementType>> {
   as?: T;
   className?: string;
+  variant?: string;
+  color?: THEME_COLOR;
   submit?: boolean;
 }
 
@@ -18,6 +22,7 @@ const DEFAULT_TAG = 'button';
 const Button = <T extends ElementType = typeof DEFAULT_TAG>({
   as,
   className,
+  color = THEME_COLOR.DEFAULT,
   submit = false,
   children,
   ...buttonProps
@@ -29,9 +34,14 @@ const Button = <T extends ElementType = typeof DEFAULT_TAG>({
       'submit';
   }
 
-  const boxClassName = classnames('button', className);
+  const CLASSNAME_BUTTON_COLOR = `button__${color}`;
+  const buttonClassName = classnames(
+    'button',
+    CLASSNAME_BUTTON_COLOR,
+    className,
+  );
   return (
-    <Tag className={boxClassName} {...buttonProps}>
+    <Tag className={buttonClassName} {...buttonProps}>
       {children}
     </Tag>
   );
