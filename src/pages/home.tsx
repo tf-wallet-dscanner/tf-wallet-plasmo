@@ -2,6 +2,7 @@ import { FaBeer } from 'react-icons/fa';
 import { NavigateFunction, useNavigate } from 'react-router-dom';
 
 import Button from '~components/atoms/button';
+import Container from '~components/atoms/container';
 import { THEME_COLOR } from '~constants/colors';
 import { useCounterStore } from '~store';
 
@@ -17,7 +18,8 @@ export const Home = () => {
   };
 
   return (
-    <div style={{ padding: 16 }}>
+    <Container>
+      <div className="h-28">asd</div>
       <span>Home page111</span>
       <Button prefixIcon={<FaBeer />} onClick={onNextPage}>
         About
@@ -35,6 +37,6 @@ export const Home = () => {
       <Button color={THEME_COLOR.WARNING} onClick={increasePopulation}>
         Click!
       </Button>
-    </div>
+    </Container>
   );
 };

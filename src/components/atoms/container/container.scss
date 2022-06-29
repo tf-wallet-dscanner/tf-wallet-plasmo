@@ -1,0 +1,7 @@
+.atoms__container {
+  @apply w-full h-full flex items-center justify-center p-6;
+
+  &-wrapper {
+    @apply w-full h-full items-stretch;
+  }
+}
