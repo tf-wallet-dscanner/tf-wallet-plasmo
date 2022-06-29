@@ -1,3 +1,4 @@
+import { FaBeer } from 'react-icons/fa';
 import { NavigateFunction, useNavigate } from 'react-router-dom';
 
 import Button from '~components/atoms/button';
@@ -18,10 +19,13 @@ export const Home = () => {
   return (
     <div style={{ padding: 16 }}>
       <span>Home page111</span>
-      <Button onClick={onNextPage}>About</Button>
+      <Button prefixIcon={<FaBeer />} onClick={onNextPage}>
+        About
+      </Button>
       <Button
         color={THEME_COLOR.ERROR}
         className="font-bold pl-5"
+        suffixIcon={<FaBeer />}
         onClick={() => {
           navigation('/hong');
         }}>

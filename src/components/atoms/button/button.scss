@@ -26,4 +26,12 @@
   &__success {
     @apply bg-success;
   }
+
+  &__prefix-icon {
+    @apply flex items-center mr-1;
+  }
+
+  &__suffix-icon {
+    @apply flex items-center ml-1;
+  }
 }
