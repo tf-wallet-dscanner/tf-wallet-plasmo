@@ -3,6 +3,7 @@ import type {
   ComponentPropsWithoutRef,
   ElementType,
   PropsWithChildren,
+  ReactElement,
 } from 'react';
 
 import { THEME_COLOR } from '~constants/colors';
@@ -15,6 +16,8 @@ interface ButtonProps<T extends PropsWithChildren<ElementType>> {
   variant?: string;
   color?: THEME_COLOR;
   submit?: boolean;
+  prefixIcon?: ReactElement;
+  suffixIcon?: ReactElement;
 }
 
 const DEFAULT_TAG = 'button';
@@ -24,6 +27,8 @@ const Button = <T extends ElementType = typeof DEFAULT_TAG>({
   className,
   color = THEME_COLOR.DEFAULT,
   submit = false,
+  prefixIcon,
+  suffixIcon,
   children,
   ...buttonProps
 }: ButtonProps<T> &
@@ -40,9 +45,12 @@ const Button = <T extends ElementType = typeof DEFAULT_TAG>({
     CLASSNAME_BUTTON_COLOR,
     className,
   );
+
   return (
     <Tag className={buttonClassName} {...buttonProps}>
+      {prefixIcon && <span className="button__prefix-icon">{prefixIcon}</span>}
       {children}
+      {suffixIcon && <span className="button__suffix-icon">{suffixIcon}</span>}
     </Tag>
   );
 };
