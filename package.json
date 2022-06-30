@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "classnames": "^2.3.1",
-    "extension-port-stream": "^2.0.1",
+    "extension-port-stream": "^2.0.0",
+    "loglevel": "^1.8.0",
     "plasmo": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -62,6 +63,23 @@
   "manifest": {
     "host_permissions": [
       "https://*/*"
+    ],
+    "background": {
+      "service_worker": "../src/background/index.ts",
+      "type": "module"
+    },
+    "permissions": [
+      "storage",
+      "unlimitedStorage",
+      "clipboardWrite",
+      "http://localhost:8545/",
+      "https://*.infura.io/",
+      "https://chainid.network/chains.json",
+      "https://lattice.gridplus.io/*",
+      "activeTab",
+      "webRequest",
+      "*://*.eth/",
+      "notifications"
     ]
   }
 }

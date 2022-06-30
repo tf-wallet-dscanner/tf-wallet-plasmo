@@ -21,7 +21,8 @@ function IndexPopup() {
   // setup stream to background
   const extensionPort = browser.runtime.connect({ name: 'popup' });
   const connectionStream = new PortStream(extensionPort);
-
+  
+  console.log('UI browser.runtime.sendMessage');
   browser.runtime.sendMessage(extensionPort).then(function () {
     console.log('sendMessage callback');
   });
