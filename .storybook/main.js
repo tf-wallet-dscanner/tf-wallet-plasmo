@@ -5,6 +5,21 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
     '@storybook/preset-scss',
+    {
+      name: '@storybook/addon-postcss',
+      options: {
+        cssLoaderOptions: {
+          importLoaders: 1,
+        },
+        postcssLoaderOptions: {
+          postcssOptions: {
+            plugins: [require.resolve('tailwindcss')],
+          },
+          // When using postCSS 8
+          implementation: require('postcss'),
+        },
+      },
+    },
   ],
   framework: '@storybook/react',
 };

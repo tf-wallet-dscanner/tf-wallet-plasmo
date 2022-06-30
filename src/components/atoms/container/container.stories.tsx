@@ -15,9 +15,3 @@ export const Basic = Template.bind({});
 Basic.args = {
   children: 'Basic Container',
 };
-
-export const Polymorphism = Template.bind({});
-Polymorphism.args = {
-  children: 'Polymorphism Container',
-  as: 'section',
-};
