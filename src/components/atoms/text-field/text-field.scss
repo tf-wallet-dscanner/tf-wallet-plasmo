@@ -1,0 +1,19 @@
+.text-field {
+  @apply w-full inline-flex border text-lg py-2 px-3 border-gray-300 rounded-lg focus-within:border-primary #{!important};
+
+  &__input {
+    @apply w-full border-none text-base focus:ring-0 #{!important};
+  }
+
+  &__prefix-icon {
+    @apply flex items-center mx-1 text-gray-400;
+  }
+
+  &__suffix-icon {
+    @apply flex items-center mx-1 cursor-pointer;
+  }
+
+  &__rules {
+    @apply pt-1 text-red-600 text-sm;
+  }
+}
