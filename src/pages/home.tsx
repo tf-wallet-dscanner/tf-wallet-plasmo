@@ -2,6 +2,7 @@ import { FaBeer } from 'react-icons/fa';
 import { NavigateFunction, useNavigate } from 'react-router-dom';
 
 import Button from '~components/atoms/button';
+import Card from '~components/atoms/card';
 import Container from '~components/atoms/container';
 import { THEME_COLOR } from '~constants/colors';
 import { useCounterStore } from '~store';
@@ -37,6 +38,9 @@ export const Home = () => {
       <Button color={THEME_COLOR.WARNING} onClick={increasePopulation}>
         Click!
       </Button>
+      <Card title="hello card" content={<div>content area</div>} outlined>
+        asdad
+      </Card>
     </Container>
   );
 };

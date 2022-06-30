@@ -33,7 +33,7 @@ function IndexPopup() {
     <React.StrictMode>
       <MemoryRouter>
         <QueryClientProvider client={queryClient}>
-          <div className="w-[360] h-[600]">
+          <div className="dark w-[360] h-[600]">
             <Routing />
           </div>
           <ReactQueryDevtools initialIsOpen={false} />
