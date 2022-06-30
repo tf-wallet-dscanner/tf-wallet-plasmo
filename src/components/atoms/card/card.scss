@@ -1,0 +1,15 @@
+.card {
+  @apply flex flex-col p-4;
+
+  &__outlined {
+    @apply border-solid border-[1px] border-neutral-400 rounded;
+  }
+
+  &__title {
+    @apply mb-2 font-bold text-lg text-info;
+  }
+
+  &__content {
+    @apply text-sm text-stone-600;
+  }
+}
